@@ -151,7 +151,6 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  attr_reader :name, :age, :gender
     def initialize(**params)
       @name = params[:name]
       @age = params[:age]
@@ -180,16 +179,14 @@ end
 
 class UserQ18
   # 以下に回答を記載
-    attr_reader :name, :age
-    def initialize(**params)
-      @name = params[:name]
-      @age = params[:age]
+    def initialize(name:,age:)
+      @name = name
+      @age = age
     end
 
     def introduce
-      puts age > 10 ?  "こんにちは,#{@name}と申します。宜しくお願いいたします。" : "はいさいまいど〜, #{@name}です！！！"
+      puts @age > 10 ?  "こんにちは,#{@name}と申します。宜しくお願いいたします。" : "はいさいまいど〜, #{@name}です！！！"
     end
-
 end
 
 def q18
